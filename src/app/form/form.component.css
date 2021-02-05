@@ -1,0 +1,18 @@
+.required{
+    color: red;
+}
+.one{
+    color: #4CAF50;
+}
+.transparent-input{
+    background-color:rgba(0,0,0,0) !important;
+    
+}
+button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    color:  red;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}

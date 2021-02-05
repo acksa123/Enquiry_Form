@@ -1,0 +1,32 @@
+table {
+    border-collapse: collapse; 
+    width: 100%;
+    
+  }
+  
+  thead, td {
+    text-align: left;
+    padding: 5px;
+  }
+  
+  tr:nth-child(even){
+      background-color: black;
+      
+}
+  
+  thead{
+    background-color: black;
+    color:#b5b2b1 ;
+  }
+
+  tbody {
+    background-color: #4CAF50;
+    color:white;
+  }
+  h1{
+    color: black;
+    text-align: center;
+  }
+  .one{
+    color: #4CAF50 ;
+  }
