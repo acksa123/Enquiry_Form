@@ -1,0 +1,59 @@
+<div class="bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+            <div class="col text-center" style="color:rgb(9, 10, 10)">
+                
+                <h1>Enquiry <span class="one">Edit</span>.</h1>
+            </div>
+            <hr style="height:4px;border-width:0;color:green;background-color:green">
+            
+            <br>
+            <a routerLink="/history"></a>
+            <form [formGroup]="profileForm" (ngSubmit)="update()">
+                <div class="mb-3 ">
+                    <label for="" class="form-label"><strong>Name <span class="required">*</span></strong> </label>
+                    <input formControlName="name" type="text" class="form-control transparent-input" name="name" aria-describedby="emailHelp">
+                    <div *ngIf="profileForm.get('name')?.touched && profileForm.get('name')?.errors">
+                        <label *ngIf="profileForm.get('name')?.errors?.required" style="color: red;">Username is required</label>
+                      </div>
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label"><strong> Email <span class="required">*</span></strong></label>
+                    <input formControlName="email"  type="email" class="form-control transparent-input" name="emails">
+                    <div *ngIf="profileForm.get('email')?.touched && profileForm.get('email')?.errors">
+                        <label *ngIf="profileForm.get('email')?.errors?.required" style="color: red;">Email is required</label>
+                        <label *ngIf="profileForm.get('email')?.errors?.email" style="color: red;">Invalid Email </label>
+                        <label *ngIf="profileForm.get('email')?.errors?.pattern" style="color: red">Please, Enter valid mail address
+                        </label> 
+                    </div>
+                </div>
+                <div class="mb-3 ">
+                    <label for="" class="form-label"><strong>Phone<span class="required">*</span></strong></label>
+                    <input formControlName="phone"  type="text" class="form-control transparent-input" name="phone">
+                    <div *ngIf="profileForm.get('phone')?.touched && profileForm.get('phone')?.errors">
+                        <label *ngIf="profileForm.get('phone')?.errors?.required" style="color: red;">Phone number is required</label>
+                         <label *ngIf="profileForm.get('phone')?.errors?.pattern" style="color: red">Please, Enter  valid 10 digit Mobile Number 
+                        </label> 
+                      </div>
+                </div>
+                <div class="mb-3">
+                    <label for="floatingTextarea"><strong>Message<span class="required">*</span></strong></label>
+                    <textarea formControlName="message"  class="form-control transparent-input" placeholder="Leave a message here..." name="floatingTextarea" rows="8"
+                        cols="60"></textarea>
+                        <div *ngIf="profileForm.get('message')?.touched && profileForm.get('message')?.errors">
+                            <label *ngIf="profileForm.get('message')?.errors?.required" style="color: red;">This field is required</label>
+                          </div>
+    
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit"  class="btn btn-success"><strong>UPDATE</strong>
+                    </button>
+                </div>
+    
+            </form>
+        </div>
+        </div>
+    </div>
+    </div>
+    

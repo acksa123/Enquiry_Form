@@ -10,6 +10,7 @@
         <td>Email</td>
         <td>Phone no</td>
         <td>Message</td>
+        <td>Update</td>
 
     </tr>
 </thead>
@@ -19,6 +20,7 @@
         <td>{{item.email}}</td>
         <td>{{item.phone}}</td>
         <td>{{item.message}}</td>
+        <td><button (click)="edit(item)"   class="btn btn-light"><strong>EDIT</strong></button></td>
 
     </tr>
 </tbody>

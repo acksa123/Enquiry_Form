@@ -33,15 +33,23 @@ export class FormComponent implements OnInit {
     const email=this.loginForm.value.email;
     const phone=this.loginForm.value.phone;
     const message=this.loginForm.value.message;
-    const user=this.dataService.add(name,email,phone,message) ;
-    if(user==1){
-    alert("submitted successfully!");
-    // console.log(this.loginForm);
-    // console.log(this.loginForm.value);
+    // const user=this.dataService.add(name,email,phone,message) ;
+  //   if(user==1){
+  //   alert("submitted successfully!");
+  //   // console.log(this.loginForm);
+  //   // console.log(this.loginForm.value);
     
   
+  //   this.router.navigateByUrl("/history");
+  // }
+   this.dataService.add(name,email,phone,message)
+   .subscribe((data:any)=>{
+    alert(data.message);
+    console.log((data));
     this.router.navigateByUrl("/history");
-  }
+    
+  })
+  
 }
 
   }
